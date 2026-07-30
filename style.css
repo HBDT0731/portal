@@ -26,8 +26,57 @@ h1{
     font-size:5rem;
     font-weight:400;
     color:#d8b07a;
-    margin-bottom:60px;
+    margin-bottom:40px;
 }
+
+/* ---------- Pantalla de acceso ---------- */
+
+.mensaje{
+    max-width:650px;
+    margin:0 auto 35px;
+    font-size:1.45rem;
+    line-height:1.7;
+    color:#d8d8d8;
+}
+
+#codigo{
+    width:100%;
+    max-width:320px;
+    padding:16px 20px;
+    border:none;
+    border-radius:50px;
+    outline:none;
+    font-size:1.25rem;
+    text-align:center;
+    font-family:"Cormorant Garamond", serif;
+    margin-bottom:25px;
+}
+
+#verificar{
+    background:#efe2cf;
+    color:#2d2d2d;
+    border:none;
+    padding:18px 60px;
+    border-radius:60px;
+    font-size:1.35rem;
+    font-family:"Cormorant Garamond", serif;
+    cursor:pointer;
+    transition:.30s;
+}
+
+#verificar:hover{
+    transform:scale(1.05);
+    background:white;
+}
+
+.error{
+    margin-top:25px;
+    color:#d8b07a;
+    font-size:1.15rem;
+    min-height:28px;
+}
+
+/* ---------- Galería ---------- */
 
 .galeria{
     display:flex;
@@ -41,86 +90,66 @@ h1{
 .galeria img{
     width:100%;
     max-width:460px;
-
     border-radius:20px;
-
     object-fit:contain;
-
-    box-shadow:
-        0 12px 35px rgba(0,0,0,.45);
-
+    box-shadow:0 12px 35px rgba(0,0,0,.45);
     transition:.35s ease;
 }
 
 .galeria img:hover{
-
     transform:translateY(-8px);
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.60);
-
+    box-shadow:0 20px 50px rgba(0,0,0,.60);
 }
 
+/* ---------- Botón ---------- */
+
 #continuar{
-
     background:#efe2cf;
-
     color:#2d2d2d;
-
     border:none;
-
     padding:18px 60px;
-
     border-radius:60px;
-
     font-size:1.6rem;
-
     font-family:"Cormorant Garamond", serif;
-
     cursor:pointer;
-
     transition:.30s;
-
 }
 
 #continuar:hover{
-
     transform:scale(1.05);
-
     background:white;
-
 }
+
+/* ---------- Responsive ---------- */
 
 @media(max-width:900px){
 
     h1{
-
         font-size:3.6rem;
+        margin-bottom:35px;
+    }
 
-        margin-bottom:40px;
-
+    .mensaje{
+        font-size:1.25rem;
     }
 
     .galeria{
-
         gap:25px;
-
     }
 
     .galeria img{
-
         max-width:100%;
-
     }
 
-    #continuar{
-
+    #continuar,
+    #verificar{
         width:100%;
-
         max-width:330px;
+        font-size:1.25rem;
+    }
 
-        font-size:1.3rem;
-
+    #codigo{
+        max-width:330px;
     }
 
 }

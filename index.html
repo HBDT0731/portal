@@ -19,27 +19,48 @@
 
 <body>
 
-<div class="contenedor">
+    <!-- Pantalla de acceso -->
+    <div class="contenedor" id="acceso">
 
-    <h1>El arte de contemplar</h1>
+        <h1>El arte de contemplar</h1>
 
-    <div class="galeria">
+        <p class="mensaje">
+            Hay momentos que solo pueden ser descubiertos por quien conoce la clave.
+        </p>
 
-        <img src="images/atardecer1.jpg" alt="Atardecer 1">
+        <input
+            type="password"
+            id="codigo"
+            placeholder="Ingresa el código">
 
-        <img src="images/atardecer2.jpg" alt="Atardecer 2">
+        <button id="verificar">
+            Continuar
+        </button>
+
+        <p id="error" class="error"></p>
 
     </div>
 
-    <button id="continuar">
+    <!-- Contenido oculto -->
+    <div class="contenedor" id="contenido" style="display:none;">
 
-        Para finalizar...
+        <h1>El arte de contemplar</h1>
 
-    </button>
+        <div class="galeria">
 
-</div>
+            <img src="images/atardecer1.jpg" alt="Atardecer 1">
 
-<script src="script.js"></script>
+            <img src="images/atardecer2.jpg" alt="Atardecer 2">
+
+        </div>
+
+        <button id="continuar">
+            Para finalizar...
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 
