@@ -31,9 +31,6 @@ const error = document.getElementById("error");
    FUNCIONES GENERALES
    ========================================================= */
 
-
-/* Mostrar el contenido después de ingresar correctamente */
-
 function mostrarPortal() {
 
     if (acceso) {
@@ -46,8 +43,6 @@ function mostrarPortal() {
 
 }
 
-
-/* Mostrar nuevamente la pantalla de acceso */
 
 function mostrarAcceso() {
 
@@ -66,8 +61,6 @@ function mostrarAcceso() {
 }
 
 
-/* Cerrar completamente la sesión */
-
 function cerrarSesionPortal() {
 
     sessionStorage.removeItem(SESION_PORTAL);
@@ -78,8 +71,6 @@ function cerrarSesionPortal() {
 }
 
 
-/* Marcar que vamos hacia otra página DEL MISMO portal */
-
 function marcarNavegacionInterna() {
 
     sessionStorage.setItem(NAVEGACION_INTERNA, "si");
@@ -88,14 +79,8 @@ function marcarNavegacionInterna() {
 
 
 /* =========================================================
-   COMPROBAR SESIÓN AL CARGAR UNA PÁGINA
+   COMPROBAR SESIÓN
    ========================================================= */
-
-
-/*
-   Si venimos navegando desde otra sección del portal,
-   mantenemos la sesión.
-*/
 
 if (sessionStorage.getItem(NAVEGACION_INTERNA) === "si") {
 
@@ -105,11 +90,6 @@ if (sessionStorage.getItem(NAVEGACION_INTERNA) === "si") {
 }
 
 
-/*
-   Si ya se autenticó durante esta sesión,
-   no volvemos a pedir 3107.
-*/
-
 if (sessionStorage.getItem(SESION_PORTAL) === "si") {
 
     mostrarPortal();
@@ -118,7 +98,7 @@ if (sessionStorage.getItem(SESION_PORTAL) === "si") {
 
 
 /* =========================================================
-   VALIDAR LA CLAVE 3107
+   VALIDAR CLAVE
    ========================================================= */
 
 if (botonVerificar && inputCodigo) {
@@ -152,14 +132,10 @@ if (botonVerificar && inputCodigo) {
     });
 
 
-    /* Permitir ingresar la clave con Enter */
-
     inputCodigo.addEventListener("keypress", function (e) {
 
         if (e.key === "Enter") {
-
             botonVerificar.click();
-
         }
 
     });
@@ -168,15 +144,8 @@ if (botonVerificar && inputCodigo) {
 
 
 /* =========================================================
-   BOTÓN ORIGINAL "PARA FINALIZAR..."
+   ENTRAR AL MENÚ
    ========================================================= */
-
-
-/*
-   POR AHORA conserva la navegación original hacia carta.html.
-   Más adelante index.html será el menú 31/07 - 03/09 -
-   Atardeceres y modificaremos esta parte.
-*/
 
 const botonContinuar = document.getElementById("continuar");
 
@@ -186,7 +155,7 @@ if (botonContinuar) {
 
         marcarNavegacionInterna();
 
-        window.location.href = "carta.html";
+        window.location.href = "menu.html";
 
     });
 
@@ -194,14 +163,8 @@ if (botonContinuar) {
 
 
 /* =========================================================
-   DETECTAR ENLACES INTERNOS AUTOMÁTICAMENTE
+   DETECTAR ENLACES INTERNOS
    ========================================================= */
-
-
-/*
-   Cualquier enlace HTML que lleve hacia otra página
-   del propio portal conserva la sesión.
-*/
 
 document.addEventListener("click", function (e) {
 
@@ -216,11 +179,6 @@ document.addEventListener("click", function (e) {
     if (!destino) {
         return;
     }
-
-    /*
-       No consideramos navegación interna:
-       enlaces externos, teléfono, correo o anclas.
-    */
 
     if (
         destino.startsWith("http://") ||
@@ -241,72 +199,17 @@ document.addEventListener("click", function (e) {
    SEGURIDAD CUANDO SALE DEL PORTAL
    ========================================================= */
 
-
-/*
-   COMPORTAMIENTO:
-
-   3107
-       ↓
-   sesión abierta
-       ↓
-   puede navegar libremente dentro del portal
-
-   PERO:
-
-   Portal → WhatsApp
-   Portal → Instagram
-   Portal → otra pestaña
-   Portal → minimizar navegador
-   Portal → bloquear celular
-
-       ↓
-
-   al regresar se cierra la sesión.
-*/
-
-
 document.addEventListener("visibilitychange", function () {
-
-
-    /* ---------------------------------------------
-       EL PORTAL DEJÓ DE ESTAR VISIBLE
-       --------------------------------------------- */
 
     if (document.hidden) {
 
-        /*
-           EXCEPCIÓN:
-
-           Si estamos abriendo el selector de fotografías,
-           NO cerramos la sesión.
-
-           Esto será utilizado posteriormente por
-           atardeceres.html.
-        */
-
         if (sessionStorage.getItem(SELECTOR_FOTO) === "si") {
-
             return;
-
         }
-
-
-        /*
-           Si estamos haciendo navegación interna,
-           tampoco cerramos la sesión.
-        */
 
         if (sessionStorage.getItem(NAVEGACION_INTERNA) === "si") {
-
             return;
-
         }
-
-
-        /*
-           En cualquier otro caso marcamos que
-           realmente salió del portal.
-        */
 
         if (sessionStorage.getItem(SESION_PORTAL) === "si") {
 
@@ -319,17 +222,6 @@ document.addEventListener("visibilitychange", function () {
     }
 
 
-    /* ---------------------------------------------
-       EL PORTAL VOLVIÓ A ESTAR VISIBLE
-       --------------------------------------------- */
-
-
-    /*
-       Si estaba escogiendo una foto,
-       regresó legítimamente desde Galería/Fotos/Archivos.
-       La sesión continúa.
-    */
-
     if (sessionStorage.getItem(SELECTOR_FOTO) === "si") {
 
         sessionStorage.removeItem(SELECTOR_FOTO);
@@ -340,11 +232,6 @@ document.addEventListener("visibilitychange", function () {
     }
 
 
-    /*
-       Si había salido realmente del portal,
-       cerramos la sesión.
-    */
-
     if (
         sessionStorage.getItem(PORTAL_OCULTO) === "si" &&
         sessionStorage.getItem(SESION_PORTAL) === "si"
@@ -352,15 +239,8 @@ document.addEventListener("visibilitychange", function () {
 
         cerrarSesionPortal();
 
-
-        /*
-           Si ya estamos en index,
-           simplemente mostramos la contraseña.
-        */
-
         const paginaActual =
             window.location.pathname.split("/").pop();
-
 
         if (
             paginaActual === "index.html" ||
@@ -370,11 +250,6 @@ document.addEventListener("visibilitychange", function () {
             mostrarAcceso();
 
         } else {
-
-            /*
-               Si estaba en 31/07, 03/09 o Atardeceres,
-               lo devolvemos al acceso.
-            */
 
             window.location.replace("index.html");
 
@@ -386,17 +261,8 @@ document.addEventListener("visibilitychange", function () {
 
 
 /* =========================================================
-   FUNCIÓN PARA EL FUTURO SELECTOR DE FOTOS
+   FUNCIÓN PREPARADA PARA FUTUROS SELECTORES
    ========================================================= */
-
-
-/*
-   atardeceres.html utilizará esta función JUSTO antes
-   de abrir Fotos / Galería / Archivos.
-
-   Así el sistema sabe que cambiar de aplicación
-   en ese momento es legítimo y NO debe cerrar sesión.
-*/
 
 function prepararSelectorDeFoto() {
 
@@ -408,15 +274,6 @@ function prepararSelectorDeFoto() {
 /* =========================================================
    BOTÓN DE SALIR
    ========================================================= */
-
-
-/*
-   Más adelante podremos poner en el menú:
-
-   <button id="salir-portal">Salir</button>
-
-   y este código cerrará inmediatamente la sesión.
-*/
 
 const botonSalir = document.getElementById("salir-portal");
 
