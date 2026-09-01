@@ -351,3 +351,197 @@ body.pagina-fecha {
         text-align: left;
     }
 }
+/* =========================================================
+   MENÚ PRINCIPAL — EL ARTE DE OBSERVAR
+   ========================================================= */
+
+.pagina-menu {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    background: #111111;
+    color: #f5eee3;
+
+    font-family: "Cormorant Garamond", serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* CONTENEDOR */
+
+.pagina-menu .menu-principal {
+    width: 100%;
+    max-width: 1050px;
+
+    padding: 70px 30px;
+
+    text-align: center;
+}
+
+
+/* ENCABEZADO */
+
+.pagina-menu .encabezado-menu {
+    margin-bottom: 70px;
+}
+
+
+.pagina-menu .encabezado-menu h1 {
+    margin: 0 0 18px;
+
+    font-family: "Great Vibes", cursive;
+    font-size: 5rem;
+    font-weight: 400;
+
+    color: #d8b07a;
+}
+
+
+.pagina-menu .subtitulo-menu {
+    margin: 0;
+
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+
+    color: #d6cec3;
+}
+
+
+/* OPCIONES */
+
+.pagina-menu .opciones-menu {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* TARJETA */
+
+.pagina-menu .opcion-menu {
+    min-height: 220px;
+
+    padding: 35px 20px;
+
+    border: 1px solid rgba(216, 176, 122, 0.32);
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.015);
+
+    text-decoration: none;
+    color: inherit;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.pagina-menu .opcion-menu:hover {
+    transform: translateY(-7px);
+
+    border-color: #d8b07a;
+
+    background: rgba(216, 176, 122, 0.06);
+}
+
+
+/* FECHAS */
+
+.pagina-menu .numero-menu {
+    margin-bottom: 18px;
+
+    font-size: 1.05rem;
+    font-weight: 500;
+
+    letter-spacing: 0.28em;
+
+    color: #d8b07a;
+}
+
+
+/* INFINITO */
+
+.pagina-menu .simbolo-menu {
+    font-size: 2rem;
+    letter-spacing: normal;
+}
+
+
+/* TEXTO DE CADA OPCIÓN */
+
+.pagina-menu .texto-menu {
+    font-size: 1.55rem;
+    font-weight: 400;
+
+    color: #f5eee3;
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .pagina-menu .menu-principal {
+        padding: 55px 20px;
+    }
+
+
+    .pagina-menu .encabezado-menu {
+        margin-bottom: 45px;
+    }
+
+
+    .pagina-menu .encabezado-menu h1 {
+        font-size: 3.6rem;
+    }
+
+
+    .pagina-menu .subtitulo-menu {
+        font-size: 1.08rem;
+        line-height: 1.5;
+    }
+
+
+    .pagina-menu .opciones-menu {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+
+    .pagina-menu .opcion-menu {
+        min-height: 135px;
+        padding: 25px 20px;
+    }
+
+
+    .pagina-menu .numero-menu {
+        margin-bottom: 10px;
+    }
+
+
+    .pagina-menu .texto-menu {
+        font-size: 1.4rem;
+    }
+
+}
