@@ -545,3 +545,99 @@ body.pagina-fecha {
     }
 
 }
+/* =========================================================
+   AJUSTES FINALES DE NAVEGACIÓN
+   EL ARTE DE OBSERVAR
+   ========================================================= */
+
+
+/* ---------- MENÚ PRINCIPAL ---------- */
+
+.pagina-menu .menu-principal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 20px;
+}
+
+.pagina-menu .encabezado-menu {
+    margin-bottom: 45px;
+}
+
+.pagina-menu .encabezado-menu h1 {
+    margin-bottom: 20px;
+}
+
+.pagina-menu .subtitulo-menu {
+    margin-bottom: 0;
+}
+
+
+/* ---------- BOTÓN VOLVER AL MENÚ ---------- */
+
+.volver-menu-carta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 55px auto 35px;
+    padding: 0 20px;
+}
+
+.volver-menu-carta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 180px;
+    padding: 13px 26px;
+
+    border: 1px solid rgba(219, 176, 122, 0.55);
+    border-radius: 30px;
+
+    color: #dbb07a;
+    background: transparent;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.volver-menu-carta a:hover {
+    background: #dbb07a;
+    color: #111111;
+    transform: translateY(-2px);
+}
+
+
+/* ---------- CELULAR ---------- */
+
+@media (max-width: 700px) {
+
+    .pagina-menu .menu-principal {
+        padding: 35px 18px;
+    }
+
+    .pagina-menu .encabezado-menu {
+        margin-bottom: 32px;
+    }
+
+    .volver-menu-carta {
+        margin-top: 40px;
+        margin-bottom: 25px;
+    }
+
+    .volver-menu-carta a {
+        width: 100%;
+        max-width: 300px;
+    }
+
+}
