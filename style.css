@@ -153,3 +153,536 @@ h1{
     }
 
 }
+
+/* ==================================================
+   03 · 09 — El arte de contemplar
+   ================================================== */
+
+body.pagina-fecha {
+    display: block;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    background: #111111;
+    color: #ffffff;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.pagina-fecha .capitulo {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 24px 90px;
+}
+
+/* Encabezado */
+
+.pagina-fecha .encabezado-capitulo {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.pagina-fecha .fecha-capitulo {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.15rem;
+    letter-spacing: 0.35em;
+    color: #d8b07a;
+    margin-bottom: 18px;
+}
+
+.pagina-fecha .encabezado-capitulo h1 {
+    font-family: "Great Vibes", cursive;
+    font-size: 5rem;
+    font-weight: 400;
+    color: #d8b07a;
+    margin: 0;
+}
+
+/* Atardeceres */
+
+.pagina-fecha .galeria-capitulo {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    width: 100%;
+
+}
+
+.pagina-fecha .atardecer-capitulo {
+    width: 100%;
+    max-width: 360px;
+    margin: 0;
+}
+
+.pagina-fecha .atardecer-capitulo img {
+    display: block;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 12px;
+
+}
+
+/* Botón final */
+
+.pagina-fecha .cierre-capitulo {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+    margin-bottom: 30px;
+}
+
+.pagina-fecha .boton-final {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.04em;
+    color: #111111;
+    background: #d8b07a;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 32px;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.pagina-fecha .boton-final:hover {
+    transform: scale(1.04);
+    background: #ffffff;
+}
+
+/* Carta */
+
+.pagina-fecha .oculta {
+    display: none;
+}
+
+.pagina-fecha .carta-final {
+    width: 100%;
+    margin-top: 70px;
+    padding-top: 20px;
+}
+
+.pagina-fecha .hoja-carta {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 55px 50px;
+    background: #f4efe6;
+    color: #211f1c;
+    border-radius: 3px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+}
+
+.pagina-fecha .hoja-carta h2 {
+    font-family: "Great Vibes", cursive;
+    font-size: 3.2rem;
+    font-weight: 400;
+    text-align: center;
+    color: #211f1c;
+    margin: 0 0 45px;
+}
+
+.pagina-fecha .hoja-carta p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.18rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0 0 24px;
+}
+
+.pagina-fecha .hoja-carta strong {
+    font-weight: 600;
+}
+
+/* Celular */
+
+@media (max-width: 700px) {
+
+    .pagina-fecha .capitulo {
+        padding: 50px 18px 70px;
+    }
+
+    .pagina-fecha .fecha-capitulo {
+        font-size: 1rem;
+        letter-spacing: 0.28em;
+    }
+
+    .pagina-fecha .encabezado-capitulo h1 {
+        font-size: 3.6rem;
+    }
+
+    .pagina-fecha .encabezado-capitulo {
+        margin-bottom: 40px;
+    }
+
+   .pagina-fecha .galeria-capitulo {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.pagina-fecha .atardecer-capitulo {
+    max-width: 100%;
+}
+
+.pagina-fecha .atardecer-capitulo img {
+    height: auto;
+    max-height: 620px;
+    object-fit: contain;
+}
+
+    .pagina-fecha .cierre-capitulo {
+        margin-top: 50px;
+    }
+
+    .pagina-fecha .hoja-carta {
+        padding: 42px 25px;
+    }
+
+    .pagina-fecha .hoja-carta h2 {
+        font-size: 2.7rem;
+        margin-bottom: 35px;
+    }
+
+    .pagina-fecha .hoja-carta p {
+        font-size: 1.08rem;
+        line-height: 1.75;
+        text-align: left;
+    }
+}
+/* =========================================================
+   MENÚ PRINCIPAL — EL ARTE DE OBSERVAR
+   ========================================================= */
+
+.pagina-menu {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    background: #111111;
+    color: #f5eee3;
+
+    font-family: "Cormorant Garamond", serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* CONTENEDOR */
+
+.pagina-menu .menu-principal {
+    width: 100%;
+    max-width: 1050px;
+
+    padding: 70px 30px;
+
+    text-align: center;
+}
+
+
+/* ENCABEZADO */
+
+.pagina-menu .encabezado-menu {
+    margin-bottom: 70px;
+}
+
+
+.pagina-menu .encabezado-menu h1 {
+    margin: 0 0 18px;
+
+    font-family: "Great Vibes", cursive;
+    font-size: 5rem;
+    font-weight: 400;
+
+    color: #d8b07a;
+}
+
+
+.pagina-menu .subtitulo-menu {
+    margin: 0;
+
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+
+    color: #d6cec3;
+}
+
+
+/* OPCIONES */
+
+.pagina-menu .opciones-menu {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* TARJETA */
+
+.pagina-menu .opcion-menu {
+    min-height: 220px;
+
+    padding: 35px 20px;
+
+    border: 1px solid rgba(216, 176, 122, 0.32);
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.015);
+
+    text-decoration: none;
+    color: inherit;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.pagina-menu .opcion-menu:hover {
+    transform: translateY(-7px);
+
+    border-color: #d8b07a;
+
+    background: rgba(216, 176, 122, 0.06);
+}
+
+
+/* FECHAS */
+
+.pagina-menu .numero-menu {
+    margin-bottom: 18px;
+
+    font-size: 1.05rem;
+    font-weight: 500;
+
+    letter-spacing: 0.28em;
+
+    color: #d8b07a;
+}
+
+
+/* INFINITO */
+
+.pagina-menu .simbolo-menu {
+    font-size: 2rem;
+    letter-spacing: normal;
+}
+
+
+/* TEXTO DE CADA OPCIÓN */
+
+.pagina-menu .texto-menu {
+    font-size: 1.55rem;
+    font-weight: 400;
+
+    color: #f5eee3;
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .pagina-menu .menu-principal {
+        padding: 55px 20px;
+    }
+
+
+    .pagina-menu .encabezado-menu {
+        margin-bottom: 45px;
+    }
+
+
+    .pagina-menu .encabezado-menu h1 {
+        font-size: 3.6rem;
+    }
+
+
+    .pagina-menu .subtitulo-menu {
+        font-size: 1.08rem;
+        line-height: 1.5;
+    }
+
+
+    .pagina-menu .opciones-menu {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+
+    .pagina-menu .opcion-menu {
+        min-height: 135px;
+        padding: 25px 20px;
+    }
+
+
+    .pagina-menu .numero-menu {
+        margin-bottom: 10px;
+    }
+
+
+    .pagina-menu .texto-menu {
+        font-size: 1.4rem;
+    }
+
+}
+/* =========================================================
+   AJUSTES FINALES DE NAVEGACIÓN
+   EL ARTE DE OBSERVAR
+   ========================================================= */
+
+
+/* ---------- MENÚ PRINCIPAL ---------- */
+
+.pagina-menu .menu-principal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 20px;
+}
+
+.pagina-menu .encabezado-menu {
+    margin-bottom: 45px;
+}
+
+.pagina-menu .encabezado-menu h1 {
+    margin-bottom: 20px;
+}
+
+.pagina-menu .subtitulo-menu {
+    margin-bottom: 0;
+}
+
+
+/* ---------- BOTÓN VOLVER AL MENÚ ---------- */
+
+.volver-menu-carta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 55px auto 35px;
+    padding: 0 20px;
+}
+
+.volver-menu-carta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 180px;
+    padding: 13px 26px;
+
+    border: 1px solid rgba(219, 176, 122, 0.55);
+    border-radius: 30px;
+
+    color: #dbb07a;
+    background: transparent;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.volver-menu-carta a:hover {
+    background: #dbb07a;
+    color: #111111;
+    transform: translateY(-2px);
+}
+
+
+/* ---------- CELULAR ---------- */
+
+@media (max-width: 700px) {
+
+    .pagina-menu .menu-principal {
+        padding: 35px 18px;
+    }
+
+    .pagina-menu .encabezado-menu {
+        margin-bottom: 32px;
+    }
+
+    .volver-menu-carta {
+        margin-top: 40px;
+        margin-bottom: 25px;
+    }
+
+    .volver-menu-carta a {
+        width: 100%;
+        max-width: 300px;
+    }
+
+}
+/* =========================================================
+   CORRECCIÓN FINAL DEL MENÚ — DOS OPCIONES
+   ========================================================= */
+
+.pagina-menu .opciones-menu {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 270px));
+    justify-content: center;
+    align-items: center;
+
+    gap: 28px;
+}
+
+.pagina-menu .opcion-menu {
+    width: 100%;
+    min-height: 210px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .pagina-menu .opciones-menu {
+        max-width: 330px;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .pagina-menu .opcion-menu {
+        min-height: 135px;
+    }
+
+}
+/* =========================================
+   AJUSTE EXCLUSIVO FOTO 1 — 31 · 07
+   ========================================= */
+
+.pagina-31-07 .atardecer-capitulo:first-child img {
+    object-position: 25% center;
+}
