@@ -202,25 +202,26 @@ body.pagina-fecha {
 
 .pagina-fecha .galeria-capitulo {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 55px;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
     width: 100%;
+
 }
 
 .pagina-fecha .atardecer-capitulo {
     width: 100%;
-    max-width: 850px;
+    max-width: 360px;
     margin: 0;
 }
 
 .pagina-fecha .atardecer-capitulo img {
     display: block;
     width: 100%;
-    height: auto;
-    max-height: 720px;
-    object-fit: contain;
-    border-radius: 4px;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 12px;
+
 }
 
 /* Botón final */
@@ -315,9 +316,21 @@ body.pagina-fecha {
         margin-bottom: 40px;
     }
 
-    .pagina-fecha .galeria-capitulo {
-        gap: 35px;
-    }
+   .pagina-fecha .galeria-capitulo {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.pagina-fecha .atardecer-capitulo {
+    max-width: 100%;
+}
+
+.pagina-fecha .atardecer-capitulo img {
+    height: auto;
+    max-height: 620px;
+    object-fit: contain;
+}
 
     .pagina-fecha .cierre-capitulo {
         margin-top: 50px;
