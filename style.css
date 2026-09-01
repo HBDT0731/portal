@@ -153,3 +153,188 @@ h1{
     }
 
 }
+
+/* ==================================================
+   03 · 09 — El arte de contemplar
+   ================================================== */
+
+body.pagina-fecha {
+    display: block;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    background: #111111;
+    color: #ffffff;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.pagina-fecha .capitulo {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 24px 90px;
+}
+
+/* Encabezado */
+
+.pagina-fecha .encabezado-capitulo {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.pagina-fecha .fecha-capitulo {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.15rem;
+    letter-spacing: 0.35em;
+    color: #d8b07a;
+    margin-bottom: 18px;
+}
+
+.pagina-fecha .encabezado-capitulo h1 {
+    font-family: "Great Vibes", cursive;
+    font-size: 5rem;
+    font-weight: 400;
+    color: #d8b07a;
+    margin: 0;
+}
+
+/* Atardeceres */
+
+.pagina-fecha .galeria-capitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 55px;
+    width: 100%;
+}
+
+.pagina-fecha .atardecer-capitulo {
+    width: 100%;
+    max-width: 850px;
+    margin: 0;
+}
+
+.pagina-fecha .atardecer-capitulo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 720px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/* Botón final */
+
+.pagina-fecha .cierre-capitulo {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+    margin-bottom: 30px;
+}
+
+.pagina-fecha .boton-final {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.04em;
+    color: #111111;
+    background: #d8b07a;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 32px;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.pagina-fecha .boton-final:hover {
+    transform: scale(1.04);
+    background: #ffffff;
+}
+
+/* Carta */
+
+.pagina-fecha .oculta {
+    display: none;
+}
+
+.pagina-fecha .carta-final {
+    width: 100%;
+    margin-top: 70px;
+    padding-top: 20px;
+}
+
+.pagina-fecha .hoja-carta {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 55px 50px;
+    background: #f4efe6;
+    color: #211f1c;
+    border-radius: 3px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+}
+
+.pagina-fecha .hoja-carta h2 {
+    font-family: "Great Vibes", cursive;
+    font-size: 3.2rem;
+    font-weight: 400;
+    text-align: center;
+    color: #211f1c;
+    margin: 0 0 45px;
+}
+
+.pagina-fecha .hoja-carta p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.18rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0 0 24px;
+}
+
+.pagina-fecha .hoja-carta strong {
+    font-weight: 600;
+}
+
+/* Celular */
+
+@media (max-width: 700px) {
+
+    .pagina-fecha .capitulo {
+        padding: 50px 18px 70px;
+    }
+
+    .pagina-fecha .fecha-capitulo {
+        font-size: 1rem;
+        letter-spacing: 0.28em;
+    }
+
+    .pagina-fecha .encabezado-capitulo h1 {
+        font-size: 3.6rem;
+    }
+
+    .pagina-fecha .encabezado-capitulo {
+        margin-bottom: 40px;
+    }
+
+    .pagina-fecha .galeria-capitulo {
+        gap: 35px;
+    }
+
+    .pagina-fecha .cierre-capitulo {
+        margin-top: 50px;
+    }
+
+    .pagina-fecha .hoja-carta {
+        padding: 42px 25px;
+    }
+
+    .pagina-fecha .hoja-carta h2 {
+        font-size: 2.7rem;
+        margin-bottom: 35px;
+    }
+
+    .pagina-fecha .hoja-carta p {
+        font-size: 1.08rem;
+        line-height: 1.75;
+        text-align: left;
+    }
+}
