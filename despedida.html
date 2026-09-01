@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>03 · 09</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-fecha">
+
+    <main class="capitulo">
+
+        <header class="encabezado-capitulo">
+            <p class="fecha-capitulo">03 · 09</p>
+            <h1>El arte de contemplar</h1>
+        </header>
+
+        <section class="galeria-capitulo">
+
+            <figure class="atardecer-capitulo">
+                <img src="images/03-09-1.jpg" alt="Atardecer del 03 de septiembre">
+            </figure>
+
+            <figure class="atardecer-capitulo">
+                <img src="images/03-09-2.jpg" alt="Atardecer del 03 de septiembre">
+            </figure>
+
+        </section>
+
+        <section class="cierre-capitulo">
+            <button id="abrir-carta" class="boton-final">
+                Para finalizar...
+            </button>
+        </section>
+
+        <section id="carta-final" class="carta-final oculta">
+
+            <div class="hoja-carta">
+
+                <h2>Para ti.</h2>
+
+                <!-- AQUÍ IRÁ TU CARTA DEFINITIVA -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        const botonCarta = document.getElementById("abrir-carta");
+        const cartaFinal = document.getElementById("carta-final");
+
+        botonCarta.addEventListener("click", function () {
+            cartaFinal.classList.remove("oculta");
+            botonCarta.style.display = "none";
+
+            cartaFinal.scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+</body>
+
+</html>
