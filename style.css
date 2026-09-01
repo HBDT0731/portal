@@ -679,3 +679,10 @@ body.pagina-fecha {
     }
 
 }
+/* =========================================
+   AJUSTE EXCLUSIVO FOTO 1 — 31 · 07
+   ========================================= */
+
+.pagina-31-07 .atardecer-capitulo:first-child img {
+    object-position: 25% center;
+}
