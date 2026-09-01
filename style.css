@@ -641,3 +641,41 @@ body.pagina-fecha {
     }
 
 }
+/* =========================================================
+   CORRECCIÓN FINAL DEL MENÚ — DOS OPCIONES
+   ========================================================= */
+
+.pagina-menu .opciones-menu {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 270px));
+    justify-content: center;
+    align-items: center;
+
+    gap: 28px;
+}
+
+.pagina-menu .opcion-menu {
+    width: 100%;
+    min-height: 210px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .pagina-menu .opciones-menu {
+        max-width: 330px;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .pagina-menu .opcion-menu {
+        min-height: 135px;
+    }
+
+}
